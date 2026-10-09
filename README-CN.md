@@ -19,9 +19,6 @@
         <a href="https://github.com/synctv-org/synctv/releases">
             <img src="https://img.shields.io/github/downloads/synctv-org/synctv/total?color=%239F7AEA&logo=github" alt="Downloads" />
         </a>
-        <a href="https://hub.docker.com/r/synctvorg/synctv">
-            <img src="https://img.shields.io/docker/pulls/synctvorg/synctv?color=%2348BB78&logo=docker&label=pulls" alt="Downloads" />
-        </a>
     </div>
 </div>
 
@@ -78,50 +75,6 @@ SyncTV 的同步观影功能确保所有观看视频的人都在同一点上。�
 
 ```bash
 sudo -v ; curl -fsSL https://raw.githubusercontent.com/synctv-org/synctv/main/script/install.sh | sudo bash -s -- -v latest
-```
-
-## Docker
-
-您也可以使用 docker 安装并运行 SyncTV。
-
-```bash
-docker run -d --name synctv -v /opt/synctv:/root/.synctv -p 8080:8080 synctvorg/synctv
-```
-
-## Docker compose
-
-[docker-compose.yml](./script/docker-compose.yml)
-
-## Helm
-
-### Helm Install
-
-```bash
-helm repo add synctv https://docs.synctv.wiki/helm-charts
-helm repo update synctv
-helm upgrade --install synctv synctv/synctv \
-  -n synctv --create-namespace \
-  --set ingress.enabled=true \
-  --set ingress.className=nginx \
-  --set 'ingress.hosts[0].host=<yourdomain.com>' \
-  --set 'ingress.hosts[0].secretName=<yourdomain-secretName>'
-```
-
-### Helm Upgrade
-
-```bash
-helm repo update synctv
-helm upgrade --install synctv synctv/synctv \
-  -n synctv \
-  --reuse-values
-```
-
-> More Helm Values:[helm-values](helm-values.md)
-
-### Helm Uninstall
-
-```bash
-helm uninstall -n synctv synctv
 ```
 
 ---
