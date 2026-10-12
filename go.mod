@@ -32,7 +32,7 @@ require (
 	github.com/mojocn/base64Captcha v1.3.8
 	github.com/natefinch/lumberjack v2.0.0+incompatible
 	github.com/pkg/errors v0.9.1
-	github.com/sirupsen/logrus v1.9.3
+	github.com/sirupsen/logrus v1.10.2
 	github.com/soheilhy/cmux v0.1.5
 	github.com/spf13/cobra v1.10.1
 	github.com/synctv-org/vendors v0.8.8
