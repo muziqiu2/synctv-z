@@ -6,7 +6,7 @@ replace github.com/synctv-org/vendors => ./vendors
 
 require (
 	github.com/Boostport/mjml-go v0.16.0
-	github.com/andybalholm/brotli v1.2.0
+	github.com/andybalholm/brotli v1.2.6
 	github.com/caarlos0/env/v9 v9.0.0
 	github.com/cavaliergopher/grab/v3 v3.0.1
 	github.com/emersion/go-sasl v0.0.0-20241020182733-b788ff22d5a6
